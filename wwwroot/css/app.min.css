@@ -1139,12 +1139,21 @@ video {
      object-fit: cover;
 }
 
+.object-bottom{
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+
 .p-5{
   padding: 1.25rem;
 }
 
 .p-8{
   padding: 2rem;
+}
+
+.p-10{
+  padding: 2.5rem;
 }
 
 .px-3{
@@ -1191,8 +1200,8 @@ video {
   padding-top: 1rem;
 }
 
-.pt-14{
-  padding-top: 3.5rem;
+.pt-12{
+  padding-top: 3rem;
 }
 
 .pb-2{
