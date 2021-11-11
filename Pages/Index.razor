@@ -1,0 +1,23 @@
+﻿@inherits LayoutComponentBase
+@page "/"
+@page "/Home"
+@layout MainLayout
+@inject ILanguageContainerService languageContainer
+
+
+<Content invertOrder="false" content="Brazil"></Content>
+<Content invertOrder="true"></Content>
+<Testimonial></Testimonial>
+
+@code {
+
+    protected override void OnInitialized()
+    {
+        // This will make the current component gets updated whenever you change the language of the application
+        languageContainer.InitLocalizedComponent(this);
+
+    }
+
+}
+
+

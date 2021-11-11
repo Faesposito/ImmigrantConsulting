@@ -1,0 +1,57 @@
+﻿@using  System.Globalization
+@inject ILanguageContainerService languageContainer
+
+
+<div class="relative">
+    <button class="focus:outline-none" @onclick="ToggleNavMenu">
+        <span class="link font-semibold font-heading space-x-12">
+            @languageContainer.Keys["Language"]
+            <img class="inline object-cover ml-4 border-2 rounded-full border-terciary h-9 w-9" src="Images/Flags/@($"{languageContainer.CurrentCulture.Name}").png" alt="Your avatar" />
+        </span>
+    </button>
+    <ul @onclick="ToggleNavMenu" class="@HideNavMenu absolute z-10 mt-2 overflow-hidden text-right border-2 rounded-md w-44 bg-primary border-terciary">
+
+        @if (languageContainer.CurrentCulture.Name != "en-US")
+        {
+            <li>
+                <a href="" class="link-borderless" @onclick='() => SetLanguage("en-US")'> Lenguage <img class="inline object-cover ml-4 border-2 rounded-full border-terciary h-9 w-9" src="./images/Flags/en-US.png" alt="Your avatar" /> </a>
+            </li>
+        }
+        @if (languageContainer.CurrentCulture.Name != "es-ES")
+        {
+            <li>
+                <a href="" class="link-borderless" @onclick='() => SetLanguage("es-ES")'> Lenguaje <img class="inline object-cover ml-4 border-2 rounded-full border-terciary h-9 w-9" src="./images/Flags/es-ES.png" alt="Your avatar" /> </a>
+            </li>
+        }
+        @if (languageContainer.CurrentCulture.Name != "br-BR")
+        {
+            <li>
+                <a href="" class="link-borderless" @onclick='() => SetLanguage("br-BR")'> Língua <img class="inline object-cover ml-4 border-2 rounded-full border-terciary h-9 w-9" src="./images/Flags/br-BR.png" alt="Your avatar" /> </a>
+            </li>
+        }
+        @if (languageContainer.CurrentCulture.Name != "fr-FR")
+        {
+            <li>
+                <a  href="" class="link-borderless" @onclick='() => SetLanguage("fr-FR")'> Langue <img class="inline object-cover ml-4 border-2 rounded-full border-terciary h-9 w-9" src="./images/Flags/fr-FR.png" alt="Your avatar" /> </a>
+            </li>
+        }
+    </ul>
+</div>
+
+
+@code
+{
+    private bool isNavMenuHidden = true;
+
+    private string HideNavMenu => isNavMenuHidden ? "hidden" : null;
+
+    private void ToggleNavMenu()
+    {
+        isNavMenuHidden = !isNavMenuHidden;
+    }
+
+    void SetLanguage(string cultureCode)
+    {
+        languageContainer.SetLanguage(System.Globalization.CultureInfo.GetCultureInfo(cultureCode));
+    }
+}

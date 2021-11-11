@@ -1,0 +1,49 @@
+﻿@inherits LayoutComponentBase
+@page "/About"
+@layout SecondaryLayout
+@inject ILanguageContainerService languageContainer
+
+
+<div class="max-w-screen-md px-4 mx-auto mt-24 mb-24 text-lg leading-relaxed text-gray-700 lg:px-0">
+    <h1 class="TittleStyle">@languageContainer.Keys["AboutUs"]</h1>
+
+    <Separator></Separator>
+
+    <p class="pb-6">@languageContainer.Keys["AboutUsP1"]</p>
+
+    <p class="pb-6">@languageContainer.Keys["AboutUsP2"]</p>
+
+    <p class="pb-6">@languageContainer.Keys["AboutUsP3"]</p>
+
+    <p class="pb-6">@languageContainer.Keys["AboutUsP4"]</p>
+
+    <p class="pb-6">@languageContainer.Keys["AboutUsP5"]</p>
+
+    <p class="pb-6">@languageContainer.Keys["AboutUsP6"]</p>
+
+    <Separator></Separator>
+
+    <h1 class="TittleStyle">@languageContainer.Keys["OurMission"]</h1>
+
+    <div class="pl-4 mb-8 italic border-l-4 rounded border-secondary">@languageContainer.Keys["OurMissionText"]</div>
+
+    <h1 class="TittleStyle">@languageContainer.Keys["OurVision"]</h1>
+
+    <div class="pl-4 mb-8 italic border-l-4 rounded border-secondary">@languageContainer.Keys["OurVisionText"]</div>
+
+    <h1 class="TittleStyle">@languageContainer.Keys["OurValues"]</h1>
+
+    <div class="pl-4 mb-8 italic border-l-4 rounded border-secondary">@languageContainer.Keys["OurValuesText"]</div>
+</div>
+
+
+@code {
+
+    protected override void OnInitialized()
+    {
+        // This will make the current component gets updated whenever you change the language of the application
+        languageContainer.InitLocalizedComponent(this);
+
+    }
+
+}

@@ -1,0 +1,69 @@
+﻿@inherits LayoutComponentBase
+@page "/PrivacyPolice"
+@layout SecondaryLayout
+@inject ILanguageContainerService languageContainer
+
+
+<div class="max-w-screen-md px-4 mx-auto mt-24 mb-24 text-lg leading-relaxed text-gray-700 lg:px-0">
+    <h1 class="TittleStyle">@languageContainer.Keys["Privacy"]</h1>
+
+    <Separator></Separator>
+
+    <p class="pb-6">@languageContainer.Keys["PrivacyP1"]</p>
+
+    <p class="pb-6">@languageContainer.Keys["PrivacyP2"]</p>
+
+    <p class="pb-6">@languageContainer.Keys["PrivacyP3"]</p>
+
+    <Separator></Separator>
+
+    <h1 class="TittleStyle">@languageContainer.Keys["PrivacyInformation"]</h1>
+
+    <div class="pl-4 mb-8  border-l-4 rounded border-secondary">
+        <p class="pb-2">@languageContainer.Keys["PrivacyInformationText1"]</p>
+        <p class="pb-2">@languageContainer.Keys["PrivacyInformationText2"]</p>
+        <p class="pb-2">@languageContainer.Keys["PrivacyInformationText3"]</p>
+    </div>
+
+    <h1 class="TittleStyle">@languageContainer.Keys["PrivacyUseOf"]</h1>
+
+    <div class="pl-4 mb-8  border-l-4 rounded border-secondary">
+        <p class="pb-2">@languageContainer.Keys["PrivacyUseOfText1"]</p>
+        <p class="pb-2">@languageContainer.Keys["PrivacyUseOfText2"]</p>
+        <p class="pb-2">@languageContainer.Keys["PrivacyUseOfText3"]</p>
+    </div>
+
+    <h1 class="TittleStyle">@languageContainer.Keys["PrivacyHowWe"]</h1>
+
+    <div class="pl-4 mb-8  border-l-4 rounded border-secondary">
+        @languageContainer.Keys["PrivacyHowWeText"]
+        <ul class="pl-6 list-disc  pt-4 pb-4">
+            <li class="pb-2">@languageContainer.Keys["PrivacyHowWeList1"]</li>
+            <li class="pb-2">@languageContainer.Keys["PrivacyHowWeList2"]</li>
+            <li class="pb-2">@languageContainer.Keys["PrivacyHowWeList3"]</li>
+            <li class="pb-2">@languageContainer.Keys["PrivacyHowWeList4"]</li>
+            <li class="pb-2">@languageContainer.Keys["PrivacyHowWeList5"]</li>
+        </ul>
+    </div>
+
+    <h1 class="TittleStyle">@languageContainer.Keys["PrivacyAccess"]</h1>
+
+    <div class="pl-4 mb-8  border-l-4 rounded border-secondary">@languageContainer.Keys["PrivacyAccessText"]</div>
+
+    <h1 class="TittleStyle">@languageContainer.Keys["PrivacySecurity"]</h1>
+
+    <div class="pl-4 mb-8  border-l-4 rounded border-secondary">@languageContainer.Keys["PrivacySecurityText"]</div>
+
+</div>
+
+
+@code {
+
+    protected override void OnInitialized()
+    {
+        // This will make the current component gets updated whenever you change the language of the application
+        languageContainer.InitLocalizedComponent(this);
+
+    }
+
+}
