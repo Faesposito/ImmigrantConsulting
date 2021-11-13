@@ -3,90 +3,55 @@
 @inject NavigationManager NavigationManager
 
 
-<section class="w-full @styles">
-    <nav class="z-50 text-white bg-primary">
-        <div class="container flex flex-col items-center p-5 mx-auto text-lg text-center sm:h-15v sm:flex-row sm:justify-evenly md:justify-items-start">
-            <!-- Menu -->
-            <div>
-                <a href="" class="flex items-center mb-4">
-                    <img class="w-44 h-20" src="Images/Logos/Logo3.jpg" alt="logo" />
-                </a>
-            </div>
 
-            <div class="hidden mx-auto md:block">
-                <ul class="flex items-center justify-center font-semibold font-heading space-x-12">
-                    <li><a href="" class="link">@languageContainer.Keys["Home"]</a></li>
-                    <li><a href="About" class="link">@languageContainer.Keys["About"]</a></li>
-                    <li><a href="Contact" class="link">@languageContainer.Keys["Contact"]</a></li>
-                    <li><a href="Services" class="link">@languageContainer.Keys["Services"]</a></li>
-                    @*<li class="">
-            <button class="focus:outline-none" @onclick="ToggleNavMenu">
-                <span class="link font-semibold font-heading space-x-12">
-                    @languageContainer.Keys["Services"]
-                    <svg xmlns="http://www.w3.org/2000/svg" class="inline w-3 h-3 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1" fill="none" viewBox="0 0 20 20" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                    </svg>
-                </span>
-            </button>
-            <ul @onclick="ToggleNavMenu" class="@HideNavMenu absolute z-10 mt-2 overflow-hidden border-2 rounded-md w-36 bg-primary border-terciary">
-                <li><a href="" class="link-borderless">Home</a></li>
-                <li><a href="" class="link-borderless">Home</a></li>
-                <li><a href="" class="link-borderless">Home</a></li>
-            </ul>
-        </li>*@
-                </ul>
-            </div>
-
-            <!-- Movil Menu -->
-
-            <div class="block w-1/6 md:hidden lg:w-4/6">
-                <button type="button" class="text-white hover:text-terciary focus:outline-none focus:text-terciary" @onclick="ToggleNavMenuMovile">
-                    <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
-                        <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
-                    </svg>
-                </button>
-
-                <ul @onclick="ToggleNavMenuMovile" class="@HideNavMenuMovile absolute left-0 z-50 w-full mt-2 text-center border-t border-b border-terciary bg-primary font-semibold ">
-                    <li><a href="" class="link">@languageContainer.Keys["Home"]</a></li>
-                    <li><a href="About" class="link">@languageContainer.Keys["About"]</a></li>
-                    <li><a href="Contact" class="link">@languageContainer.Keys["Contact"]</a></li>
-                    <li><a href="Services" class="link">@languageContainer.Keys["Services"]</a></li>
-                    @*<li>
-            <button class="focus:outline-none">
-                <span class="link font-semibold font-heading space-x-12">
-                    @languageContainer.Keys["Services"]
-                    <svg xmlns="http://www.w3.org/2000/svg" class="inline w-3 h-3 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1" fill="none" viewBox="0 0 20 20" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                    </svg>
-                </span>
-            </button>
-            <ul class="relative border-t border-terciary bg-primary">
-                <li><a href="" class="link-borderless">Home</a></li>
-                <li><a href="" class="link-borderless">Home</a></li>
-                <li><a href="" class="link-borderless">Home</a></li>
-            </ul>
-        </li>*@
-                </ul>
-            </div>
-
-            <!-- Language Selector -->
-            <LanguageSelector></LanguageSelector>
-
+<nav class="z-50 text-white w-full h-15v bg-primary">
+    <div class="container flex flex-col items-center p-5 mx-auto text-lg text-center sm:flex-row sm:justify-evenly md:justify-items-start">
+        <!-- Menu -->
+        <div>
+            <a href="" class="flex items-center mb-4 transform md:mb-0 hover:scale-105">
+                <img class=" w-40 h-16 lg:w-44 lg:h-20 .brightness-150" src="Images/Logos/Logo3.jpg" alt="logo" />
+            </a>
         </div>
-    </nav>
-   @{ if (whitVideo)
-       {
-           <Video></Video>
-       } }
 
-</section>
+        <div class="hidden mx-auto lg:block">
+            <ul class="flex items-center justify-center font-semibold font-heading space-x-12">
+                <li><a href="" class="link">@languageContainer.Keys["Home"]</a></li>
+                <li><a href="About" class="link">@languageContainer.Keys["About"]</a></li>
+                <li><a href="Contact" class="link">@languageContainer.Keys["Contact"]</a></li>
+                <li><a href="Services" class="link">@languageContainer.Keys["Services"]</a></li>
+            </ul>
+        </div>
+
+        <LanguageSelector hiddenAvailable="true" ></LanguageSelector>
+
+        <!-- Movil Menu -->
+
+        <div class="block w-1/6 lg:hidden lg:w-4/6 ">
+            <button type="button" class="text-white hover:text-terciary focus:outline-none focus:text-terciary" @onclick="ToggleNavMenuMovile">
+                <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
+                    <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
+                </svg>
+            </button>
+
+            <ul @onclick="ToggleNavMenuMovile" class="@HideNavMenuMovile absolute left-0 z-50 w-full sm:mt-6 text-center border-t border-b border-terciary bg-primary font-semibold ">
+                <li><a href="" class="link">@languageContainer.Keys["Home"]</a></li>
+                <li><a href="About" class="link">@languageContainer.Keys["About"]</a></li>
+                <li><a href="Contact" class="link">@languageContainer.Keys["Contact"]</a></li>
+                <li><a href="Services" class="link">@languageContainer.Keys["Services"]</a></li>
+                
+                <LanguageSelector hiddenAvailable="false"></LanguageSelector>
+                
+            </ul>
+            
+        </div>
+    </div>
+</nav>
+
 
 
 @code
 {
-    [Parameter]
-    public bool whitVideo { get; set; } = true;
-
+   
     private bool isNavMenuHidden = true;
 
     private string HideNavMenu => isNavMenuHidden ? "hidden" : null;
@@ -95,8 +60,6 @@
     {
         isNavMenuHidden = !isNavMenuHidden;
     }
-
-    public string styles => whitVideo ? "h-screen snap-start" : " ";
 
     private bool isNavMenuMovileHidden = true;
 

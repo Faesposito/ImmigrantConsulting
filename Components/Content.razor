@@ -1,9 +1,9 @@
 ﻿@inject ILanguageContainerService languageContainer
 @inherits LayoutComponentBase
 
-<section class="w-full h-screen snap-start">
-    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full md:px-24 lg:px-8 lg:py-48">
-        <div class="grid  gap-5 row-gap-8 lg:grid-cols-2">
+<section class="w-full h-screen">
+    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full @backgroundValue md:px-24 lg:px-8 lg:py-48">
+        <div class="grid gap-5 row-gap-8 lg:grid-cols-2">
             <div class="@order">
                 @{ if (content == "Brazil")
                     {
@@ -29,8 +29,8 @@
                     <Separator></Separator>
                 </div>
                 <div class="grid gap-5 row-gap-8">
-                    <div class="@borderDirection shadow-sm rounded border-secondary">
-                        <div class="h-full p-5 border @borderOff ">
+                    <div class="@borderDirection rounded border-secondary">
+                        <div class="h-full p-5 shadow-custom @roundedDirection ">
                             @{ if (content == "Brazil")
                                 {
                                     <p class="text-lg leading-relaxed text-gray-700">@languageContainer.Keys["BrazilIsContent"]</p>
@@ -59,9 +59,11 @@
     public string order => invertOrder ? "order-last" : "";
 
     public string borderDirection => invertOrder ? "border-r-4" : "border-l-4";
-    public string borderOff => invertOrder ? "border-r-0 rounded-l" : "border-l-0 rounded-r";
+    public string roundedDirection => invertOrder ? "rounded-l" : "rounded-r";
 
     public string contentValue => content == "Brazil" ? "Brazil" : "WhyUs";
+
+    public string backgroundValue => content == "Brazil" ? " " : "bg-gray-100";
 
 
     protected override void OnInitialized()

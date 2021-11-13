@@ -2,7 +2,7 @@
 @inject ILanguageContainerService languageContainer
 
 
-<div class="relative">
+<div class="relative @isHiddenActive">
     <button class="focus:outline-none" @onclick="ToggleNavMenu">
         <span class="link font-semibold font-heading space-x-12">
             @languageContainer.Keys["Language"]
@@ -47,6 +47,12 @@
 
 @code
 {
+    [Parameter]
+
+    public bool hiddenAvailable { get; set; }
+
+    private string isHiddenActive => hiddenAvailable ? "hidden md:block" : "md:hidden block";
+
     private bool isNavMenuHidden = true;
 
     private string HideNavMenu => isNavMenuHidden ? "hidden" : null;

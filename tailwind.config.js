@@ -11,7 +11,7 @@ module.exports = {
 	theme: {
 		extend: {
 			boxShadow: {
-				custom: "0 1px 2px 0 #562787",
+				custom: "0 0 12px 0 rgba(0, 0, 0, 0.3) ",
 				customInner: "inset 0 2px 4px 0 #562787",
 			},
 			minWidth: {
@@ -29,9 +29,11 @@ module.exports = {
 				"65v": "65vh",
 				"70v": "70vh",
 				"80v": "80vh",
+				"85v": "85vh",
 				"90v": "90vh",
 				"95v": "95vh",
 				"100v": "100vh",
+				"200v": "200vh",
 			},
 
 			colors: {
@@ -51,7 +53,9 @@ module.exports = {
 	},
 	variants: {
 		borderWidth: ["responsive", "hover", "focus"],
-		extend: {},
+		extend: {
+			transform: ["hover", "focus"],
+		},
 	},
-	plugins: [require("tailwindcss-scroll-snap"), require("tailwind-scrollbar")],
+	plugins: [require("tailwind-scrollbar")],
 };
