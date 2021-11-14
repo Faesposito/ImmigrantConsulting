@@ -6,7 +6,7 @@
     <button class="focus:outline-none" @onclick="ToggleNavMenu">
         <span class="link font-semibold font-heading space-x-12">
             @languageContainer.Keys["Language"]
-            <img class="inline object-cover ml-4 border-2 rounded-full border-terciary h-9 w-9" src="Images/Flags/@($"{languageContainer.CurrentCulture.Name}").png" alt="Your avatar" />
+            <img class="inline object-cover ml-4 border-2 rounded-full border-terciary h-9 w-9" src="Images/Flags/@($"{languageContainer.CurrentCulture.Name}").webp" alt="Your avatar" />
         </span>
     </button>
     @if (!isNavMenuHidden)
@@ -16,14 +16,14 @@
     @if (languageContainer.CurrentCulture.Name != "en-US")
     {
         <li>
-            <a href="" class="link-borderless" @onclick="onClickedLanguageEnglish"> Lenguage <img class="inline object-cover ml-4 border-2 rounded-full border-terciary h-9 w-9" src="./images/Flags/en-US.png" alt="Your avatar" /> </a>
+            <a  class="link-borderless" @onclick="onClickedLanguageEnglish"> Lenguage <img class="inline object-cover ml-4 border-2 rounded-full border-terciary h-9 w-9" src="./images/Flags/en-US.webp" alt="Your avatar" /> </a>
         </li>
     }
 
     @if (languageContainer.CurrentCulture.Name != "br-BR")
     {
         <li>
-            <a href="" class="link-borderless" @onclick="onClickedLanguagePortuguese"> Língua <img class="inline object-cover ml-4 border-2 rounded-full border-terciary h-9 w-9" src="./images/Flags/br-BR.png" alt="Your avatar" /> </a>
+            <a  class="link-borderless" @onclick="onClickedLanguagePortuguese"> Língua <img class="inline object-cover ml-4 border-2 rounded-full border-terciary h-9 w-9" src="./images/Flags/br-BR.webp" alt="Your avatar" /> </a>
         </li>
     }
 
