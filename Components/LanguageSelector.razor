@@ -2,82 +2,32 @@
 @inject ILanguageContainerService languageContainer
 
 
-<div class="relative @isHiddenActive">
-    <button class="focus:outline-none" @onclick="ToggleNavMenu">
-        <span class="link font-semibold font-heading space-x-12">
-            @languageContainer.Keys["Language"]
-            <img class="inline object-cover ml-4 border-2 rounded-full border-terciary h-9 w-9" src="Images/Flags/@($"{languageContainer.CurrentCulture.Name}").webp" alt="Your avatar" />
-        </span>
-    </button>
-    @if (!isNavMenuHidden)
-    {
-<ul class="absolute z-10 mt-2 overflow-hidden text-right border-2 rounded-md w-44 bg-primary border-terciary">
 
-    @if (languageContainer.CurrentCulture.Name != "en-US")
-    {
-        <li>
-            <a  class="link-borderless" @onclick="onClickedLanguageEnglish"> Lenguage <img class="inline object-cover ml-4 border-2 rounded-full border-terciary h-9 w-9" src="./images/Flags/en-US.webp" alt="Your avatar" /> </a>
-        </li>
-    }
-
-    @if (languageContainer.CurrentCulture.Name != "br-BR")
-    {
-        <li>
-            <a  class="link-borderless" @onclick="onClickedLanguagePortuguese"> Língua <img class="inline object-cover ml-4 border-2 rounded-full border-terciary h-9 w-9" src="./images/Flags/br-BR.webp" alt="Your avatar" /> </a>
-        </li>
-    }
-
-    @*@if (languageContainer.CurrentCulture.Name != "es-ES")
-        {
-            <li>
-                <a href="" class="link-borderless" @onclick='() => SetLanguage("es-ES")'> Lenguaje <img class="inline object-cover ml-4 border-2 rounded-full border-terciary h-9 w-9" src="./images/Flags/es-ES.png" alt="Your avatar" /> </a>
-            </li>
-        }
-
-        @if (languageContainer.CurrentCulture.Name != "fr-FR")
-        {
-            <li>
-                <a href="" class="link-borderless" @onclick='() => SetLanguage("fr-FR")'> Langue <img class="inline object-cover ml-4 border-2 rounded-full border-terciary h-9 w-9" src="./images/Flags/fr-FR.png" alt="Your avatar" /> </a>
-            </li>
-        }*@
-</ul>
-    }
-    </div>
-
+<div class="@isMovile ">
+    <a class="link-borderless" @onclick="onClickedLanguagePortuguese"><img class=" object-cover  transform border-2 rounded-full hover:scale-125 border-terciary h-9 w-9" src="Images/Flags/br-BR.webp" alt="Brazilian Flag" /> </a>
+    <div class="h-10 border border-terciary"></div>
+    <a class="link-borderless" @onclick="onClickedLanguageEnglish"> <img class=" object-cover  transform border-2 rounded-full hover:scale-125 border-terciary h-9 w-9" src="Images/Flags/en-US.webp" alt="EEUU Flag" /> </a>
+</div>
 
 @code
 {
     [Parameter]
 
-    public bool hiddenAvailable { get; set; }
+    public bool changeClass { get; set; }
 
-    private string isHiddenActive => hiddenAvailable ? "hidden md:block" : "md:hidden block";
+    private string isMovile => changeClass ? "flex items-center justify-center space-x-2" : "items-center hidden space-x-2 md:flex";
 
-    private bool isNavMenuHidden = true;
-
-    private string HideNavMenu => isNavMenuHidden ? "hidden" : null;
-
-    private void ToggleNavMenu()
-    {
-        isNavMenuHidden = !isNavMenuHidden;
-    }
-
-    private void onClickedLanguage(string value)
-    {
-        SetLanguage(value);
-        isNavMenuHidden = !isNavMenuHidden;
-    }
 
     private void onClickedLanguageEnglish()
     {
         SetLanguage("en-US");
-        isNavMenuHidden = !isNavMenuHidden;
+        
     }
 
     private void onClickedLanguagePortuguese()
     {
         SetLanguage("br-BR");
-        isNavMenuHidden = !isNavMenuHidden;
+       
     }
 
 

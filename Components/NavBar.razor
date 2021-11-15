@@ -4,10 +4,10 @@
 
 
 
-<nav class="z-50 text-white w-full h-15v bg-primary">
-    <div class="container flex flex-col items-center p-5 mx-auto text-lg text-center sm:flex-row sm:justify-evenly md:justify-items-start">
+<!--<nav class="z-50 text-white w-full h-15v bg-primary">
+    <div class="container flex flex-col items-center p-5 mx-auto text-lg text-center sm:flex-row sm:justify-evenly md:justify-items-start">-->
         <!-- Menu -->
-        <div>
+        <!--<div>
             <a href="Home" class="flex items-center mb-4 transform md:mb-0 hover:scale-105 select-none">
                 <img class=" w-40 h-16 lg:w-44 lg:h-20 .brightness-150" src="Images/Logos/Logo3.webp" alt="logo" />
             </a>
@@ -22,11 +22,11 @@
             </ul>
         </div>
 
-        <LanguageSelector hiddenAvailable="true" ></LanguageSelector>
+        <LanguageSelector hiddenAvailable="true" ></LanguageSelector>-->
 
         <!-- Movil Menu -->
 
-        <div class="block w-1/6 lg:hidden lg:w-4/6 ">
+        <!--<div class="block w-1/6 lg:hidden lg:w-4/6 ">
             <button type="button" class="text-white hover:text-terciary focus:outline-none focus:text-terciary" @onclick="ToggleNavMenuMovile">
                 <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
                     <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
@@ -45,8 +45,45 @@
             
         </div>
     </div>
-</nav>
+</nav>-->
+<div class="flex flex-wrap place-items-center">
+    <section class="relative mx-auto">
+        <!-- navbar -->
+        <nav class="flex justify-between w-screen text-white bg-primary">
+            <div class="flex items-center w-full px-5 py-6 xl:px-12">
+                <div class="flex transform w-36 hover:scale-105">
+                    <a href="#"><img class="h-16 .brightness-150" src="Images/Logos/Logo3.webp" alt="logo" /></a>
+                </div>
 
+                <ul class="hidden px-4 mx-auto space-x-8 font-semibold md:flex font-heading">
+                    <li><a href="Home" class="link">@languageContainer.Keys["Home"]</a></li>
+                    <li><a href="About" class="link">@languageContainer.Keys["About"]</a></li>
+                    <li><a href="Contact" class="link">@languageContainer.Keys["Contact"]</a></li>
+                    <li><a href="Services" class="link">@languageContainer.Keys["Services"]</a></li>
+                </ul>
+
+                <LanguageSelector></LanguageSelector>
+            </div>
+            <!-- Responsive navbar -->
+
+            <div class="self-center mr-12 navbar-burger md:hidden">
+                <button type="button" class="text-white hover:text-terciary focus:outline-none focus:text-terciary" @onclick="ToggleNavMenuMovile">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 hover:text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+
+                <ul @onclick="ToggleNavMenuMovile" class="@HideNavMenuMovile absolute left-0 z-50 w-full pb-4 mt-6 text-center border-t border-terciary bg-primary">
+                    <li><a href="Home" class="link">@languageContainer.Keys["Home"]</a></li>
+                    <li><a href="About" class="link">@languageContainer.Keys["About"]</a></li>
+                    <li><a href="Contact" class="link">@languageContainer.Keys["Contact"]</a></li>
+                    <li><a href="Services" class="link">@languageContainer.Keys["Services"]</a></li>
+                    <LanguageSelector changeClass="true"></LanguageSelector>
+                </ul>
+            </div>
+        </nav>
+    </section>
+</div>
 
 
 @code
@@ -55,6 +92,7 @@
     private bool isNavMenuHidden = true;
 
     private string HideNavMenu => isNavMenuHidden ? "hidden" : null;
+
 
     private void ToggleNavMenu()
     {
