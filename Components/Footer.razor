@@ -7,13 +7,13 @@
         <footer class="text-lg object-bottom text-white">
             <div class="container flex flex-col-reverse flex-wrap items-center justify-center pt-8 mx-auto mb-2 sm:flex-row sm:justify-between">
                 <div class="flex transform w-36 hover:scale-105">
-                    <a href="Home"><img class="h-16 .brightness-150" src="Images/Logos/Logo3.webp" alt="logo" /></a>
+                    <NavLink href=""><img class="h-16 .brightness-150" src="Images/Logos/Logo3.webp" alt="logo" /></NavLink>
                 </div>
 
                 <div class="flex flex-col space-y-10 sm:space-y-0 sm:mt-10 sm:flex-row items-center mb-4">
-                    <a href="About" class="link">@languageContainer.Keys["About"]</a>
-                    <a href="PrivacyPolice" class="link">@languageContainer.Keys["Privacy"]</a>
-                    <a href="Contact" class="link">@languageContainer.Keys["Contact"]</a>
+                    <NavLink href="About" class="link"  ActiveClass="link-active" Match=@NavLinkMatch.All>@languageContainer.Keys["About"]</NavLink>
+                    <NavLink href="PrivacyPolice" class="link"  ActiveClass="link-active" Match=@NavLinkMatch.All>@languageContainer.Keys["Privacy"]</NavLink>
+                    <NavLink href="Contact" class="link"  ActiveClass="link-active" Match=@NavLinkMatch.All>@languageContainer.Keys["Contact"]</NavLink>
                 </div>
 
                 <div class="flex items-center mb-4 text-white">

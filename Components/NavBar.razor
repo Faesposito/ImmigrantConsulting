@@ -11,14 +11,14 @@
         <nav class="flex justify-between w-screen text-white bg-primary">
             <div class="flex items-center w-full px-5 py-6 xl:px-12">
                 <div class="flex transform w-36 hover:scale-105">
-                    <a href="#"><img class="h-16 .brightness-150" src="Images/Logos/Logo3.webp" alt="logo" /></a>
+                    <NavLink href=""><img class="h-16 .brightness-150" src="Images/Logos/Logo3.webp" alt="logo" /></NavLink>
                 </div>
 
                 <ul class="hidden px-4 mx-auto space-x-8 md:flex ">
-                    <li><a href="Home" class="link">@languageContainer.Keys["Home"]</a></li>
-                    <li><a href="About" class="link">@languageContainer.Keys["About"]</a></li>
-                    <li><a href="Contact" class="link">@languageContainer.Keys["Contact"]</a></li>
-                    <li><a href="Services" class="link">@languageContainer.Keys["Services"]</a></li>
+                    <li><NavLink href="" class="link" ActiveClass="link-active" Match=@NavLinkMatch.All>@languageContainer.Keys["Home"]</NavLink></li>
+                    <li><NavLink href="About" class="link" ActiveClass="link-active" Match=@NavLinkMatch.All>@languageContainer.Keys["About"]</NavLink></li>
+                    <li><NavLink href="Contact" class="link" ActiveClass="link-active" Match=@NavLinkMatch.All>@languageContainer.Keys["Contact"]</NavLink></li>
+                    <li><NavLink href="Services" class="link" ActiveClass="link-active" Match=@NavLinkMatch.All>@languageContainer.Keys["Services"]</NavLink></li>
                 </ul>
 
                 <LanguageSelector></LanguageSelector>
@@ -33,10 +33,10 @@
                 </button>
 
                 <ul @onclick="ToggleNavMenuMovile" class="@HideNavMenuMovile absolute left-0 z-50 w-full pb-4 mt-6 text-center border-t border-terciary bg-primary">
-                    <li ><a href="Home" class="link h-16">@languageContainer.Keys["Home"]</a></li>
-                    <li ><a href="About" class="link h-16">@languageContainer.Keys["About"]</a></li>
-                    <li ><a href="Contact" class="link h-16">@languageContainer.Keys["Contact"]</a></li>
-                    <li ><a href="Services" class="link h-16">@languageContainer.Keys["Services"]</a></li>
+                    <li ><NavLink href="" class="link h-16" ActiveClass="link-active" Match=@NavLinkMatch.All>@languageContainer.Keys["Home"]</NavLink></li>
+                    <li ><NavLink href="About" class="link h-16" ActiveClass="link-active" Match=@NavLinkMatch.All>@languageContainer.Keys["About"]</NavLink></li>
+                    <li ><NavLink href="Contact" class="link h-16" ActiveClass="link-active" Match=@NavLinkMatch.All>@languageContainer.Keys["Contact"]</NavLink></li>
+                    <li ><NavLink href="Services" class="link h-16" ActiveClass="link-active" Match=@NavLinkMatch.All>@languageContainer.Keys["Services"]</NavLink></li>
                     <LanguageSelector changeClass="true"></LanguageSelector>
                 </ul>
             </div>

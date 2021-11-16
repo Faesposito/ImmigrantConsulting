@@ -52,6 +52,7 @@ module.exports = {
 		borderWidth: ["responsive", "hover", "focus"],
 		extend: {
 			transform: ["hover", "focus"],
+			textColor: ['active'],
 		},
 	},
 	plugins: [require("tailwind-scrollbar")],
