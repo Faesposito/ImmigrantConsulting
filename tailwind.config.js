@@ -44,10 +44,7 @@ module.exports = {
 
 		},
 		fontFamily: {
-			open: ["Open Sans"],
-			rale: ["Raleway"],
-			source: ["Source Serif Pro"],
-			lato: ["Lato"],
+			"Titilium-Web": ['"Titilium Web"'],
 		},
 		
 	},
