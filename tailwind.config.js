@@ -10,6 +10,9 @@ module.exports = {
 	darkMode: false, // or 'media' or 'class'
 	theme: {
 		extend: {
+			transitionProperty: {
+				'height': 'height',
+			},
 			boxShadow: {
 				custom: "0 0 12px 0 rgba(0, 0, 0, 0.3) ",
 				customInner: "inset 0 2px 4px 0 #562787",

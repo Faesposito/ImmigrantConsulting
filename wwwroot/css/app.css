@@ -18,6 +18,9 @@
 .link-active {
 	@apply block py-2 mx-4 text-xl transition duration-500 ease-in-out border-b-2 text-terciary border-terciary;
 }
+
+
+
 .loader-dots div {
 	animation-timing-function: cubic-bezier(0, 1, 1, 0);
 }
