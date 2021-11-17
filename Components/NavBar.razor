@@ -2,9 +2,6 @@
 @inject ILanguageContainerService languageContainer
 @inject NavigationManager NavigationManager
 
-
-
-
 <div id="navbar-scroll" class="  flex flex-wrap sticky top-0 z-50 place-items-center">
     <section class="relative mx-auto">
         <!-- navbar -->
@@ -33,10 +30,10 @@
                 </button>
 
                 <ul @onclick="ToggleNavMenuMovile" class="@HideNavMenuMovile absolute left-0 z-50 w-full pb-4 mt-6 text-center border-t border-terciary bg-primary">
-                    <li ><NavLink href="" class="link h-16" ActiveClass="link-active" Match=@NavLinkMatch.All>@languageContainer.Keys["Home"]</NavLink></li>
-                    <li ><NavLink href="About" class="link h-16" ActiveClass="link-active" Match=@NavLinkMatch.All>@languageContainer.Keys["About"]</NavLink></li>
-                    <li ><NavLink href="Contact" class="link h-16" ActiveClass="link-active" Match=@NavLinkMatch.All>@languageContainer.Keys["Contact"]</NavLink></li>
-                    <li ><NavLink href="Services" class="link h-16" ActiveClass="link-active" Match=@NavLinkMatch.All>@languageContainer.Keys["Services"]</NavLink></li>
+                    <li ><NavLink href="" class="link h-16" ActiveClass="link-active-movile" Match=@NavLinkMatch.All>@languageContainer.Keys["Home"]</NavLink></li>
+                    <li ><NavLink href="About" class="link h-16" ActiveClass="link-active-movile" Match=@NavLinkMatch.All>@languageContainer.Keys["About"]</NavLink></li>
+                    <li ><NavLink href="Contact" class="link h-16" ActiveClass="link-active-movile" Match=@NavLinkMatch.All>@languageContainer.Keys["Contact"]</NavLink></li>
+                    <li ><NavLink href="Services" class="link h-16" ActiveClass="link-active-movile" Match=@NavLinkMatch.All>@languageContainer.Keys["Services"]</NavLink></li>
                     <LanguageSelector changeClass="true"></LanguageSelector>
                 </ul>
             </div>

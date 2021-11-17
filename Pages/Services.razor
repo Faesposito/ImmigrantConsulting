@@ -4,129 +4,138 @@
 @inject ILanguageContainerService languageContainer
 
 
-<div class=" px-4 mx-auto mt-24 mb-28 text-lg leading-relaxed text-gray-700 lg:px-0">
+<div class="px-4 mx-auto text-lg leading-relaxed text-gray-700 lg:px-0">
 
-    <div class="flex items-center justify-center w-full">
+    <div class="containerSeparator">
         <div class="max-w-screen-lg">
             <h1 class="TittleStyle">@languageContainer.Keys["Immigration"]</h1>
 
             <Separator></Separator>
 
-            <p class="pb-6">@languageContainer.Keys["ImmigrationText1"]</p>
+            <div class="paragrapSeparator">
+                <p class="">@languageContainer.Keys["ImmigrationText1"]</p>
 
-            <p class="pb-6">@languageContainer.Keys["ImmigrationText2"]</p>
+                <p class="">@languageContainer.Keys["ImmigrationText2"]</p>
 
-            <p class="pb-6">@languageContainer.Keys["ImmigrationText3"]</p>
+                <p class="">@languageContainer.Keys["ImmigrationText3"]</p>
 
-            <p class="pb-6">@languageContainer.Keys["ImmigrationText4"]</p>
-
-            <div class="pl-4 mb-28 mt-4 border-l-4 rounded border-secondary">
-                <ul class="pl-6 list-disc  pt-4 pb-4">
-                    <li class="pb-2 flex"><ArrowList></ArrowList>@languageContainer.Keys["ImmigrationList1"]</li>
-                    <li class="pb-2 flex"><ArrowList></ArrowList>@languageContainer.Keys["ImmigrationList2"]</li>
-                    <li class="pb-2 flex"><ArrowList></ArrowList>@languageContainer.Keys["ImmigrationList3"]</li>
-                    <li class="pb-2 flex"><ArrowList></ArrowList>@languageContainer.Keys["ImmigrationList4"]</li>
-                    <li class="pb-2 flex"><ArrowList></ArrowList>@languageContainer.Keys["ImmigrationList5"]</li>
-                    <li class="pb-2 flex"><ArrowList></ArrowList>@languageContainer.Keys["ImmigrationList6"]</li>
-                    <li class="pb-2 flex"><ArrowList></ArrowList>@languageContainer.Keys["ImmigrationList7"]</li>
-                    <li class="pb-2 flex"><ArrowList></ArrowList>@languageContainer.Keys["ImmigrationList8"]</li>
-                    <li class="pb-2 flex"><ArrowList></ArrowList>@languageContainer.Keys["ImmigrationList9"]</li>
-                    <li class="pb-2 flex"><ArrowList></ArrowList>@languageContainer.Keys["ImmigrationList10"]</li>
-                    <li class="pb-2 flex"><ArrowList></ArrowList>@languageContainer.Keys["ImmigrationList11"]</li>
-                    <li class="pb-2 flex"><ArrowList></ArrowList>@languageContainer.Keys["ImmigrationList12"]</li>
-                    <li class="pb-2 flex"><ArrowList></ArrowList>@languageContainer.Keys["ImmigrationList13"]</li>
-                    <li class="pb-2 flex"><ArrowList></ArrowList>@languageContainer.Keys["ImmigrationList14"]</li>
-                    <li class="pb-2 flex"><ArrowList></ArrowList>@languageContainer.Keys["ImmigrationList15"]</li>
-                    <li class="pb-2 flex"><ArrowList></ArrowList>@languageContainer.Keys["ImmigrationList16"]</li>
-                    <li class="pb-2 flex"><ArrowList></ArrowList>@languageContainer.Keys["ImmigrationList17"]</li>
-                    <li class="pb-2 flex"><ArrowList></ArrowList>@languageContainer.Keys["ImmigrationList18"]</li>
+                <p class="">@languageContainer.Keys["ImmigrationText4"]</p>
+            </div>
+            
+            <div class="pl-4 border-l-4 rounded border-secondary">
+                <ul class="listSeparator">
+                    <li class=" flex"><ArrowList></ArrowList>@languageContainer.Keys["ImmigrationList1"]</li>
+                    <li class=" flex"><ArrowList></ArrowList>@languageContainer.Keys["ImmigrationList2"]</li>
+                    <li class=" flex"><ArrowList></ArrowList>@languageContainer.Keys["ImmigrationList3"]</li>
+                    <li class=" flex"><ArrowList></ArrowList>@languageContainer.Keys["ImmigrationList4"]</li>
+                    <li class=" flex"><ArrowList></ArrowList>@languageContainer.Keys["ImmigrationList5"]</li>
+                    <li class=" flex"><ArrowList></ArrowList>@languageContainer.Keys["ImmigrationList6"]</li>
+                    <li class=" flex"><ArrowList></ArrowList>@languageContainer.Keys["ImmigrationList7"]</li>
+                    <li class=" flex"><ArrowList></ArrowList>@languageContainer.Keys["ImmigrationList8"]</li>
+                    <li class=" flex"><ArrowList></ArrowList>@languageContainer.Keys["ImmigrationList9"]</li>
+                    <li class=" flex"><ArrowList></ArrowList>@languageContainer.Keys["ImmigrationList10"]</li>
+                    <li class=" flex"><ArrowList></ArrowList>@languageContainer.Keys["ImmigrationList11"]</li>
+                    <li class=" flex"><ArrowList></ArrowList>@languageContainer.Keys["ImmigrationList12"]</li>
+                    <li class=" flex"><ArrowList></ArrowList>@languageContainer.Keys["ImmigrationList13"]</li>
+                    <li class=" flex"><ArrowList></ArrowList>@languageContainer.Keys["ImmigrationList14"]</li>
+                    <li class=" flex"><ArrowList></ArrowList>@languageContainer.Keys["ImmigrationList15"]</li>
+                    <li class=" flex"><ArrowList></ArrowList>@languageContainer.Keys["ImmigrationList16"]</li>
+                    <li class=" flex"><ArrowList></ArrowList>@languageContainer.Keys["ImmigrationList17"]</li>
+                    <li class=" flex"><ArrowList></ArrowList>@languageContainer.Keys["ImmigrationList18"]</li>
                 </ul>
             </div>
         </div>
     </div>
 
-    <div class="flex items-center justify-center w-full bg-gray-100">
+    <div class="containerSeparator bg-gray-100">
         <div class="max-w-screen-lg">
             <h1 class="TittleStyle">@languageContainer.Keys["BrazilianDocuments"]</h1>
 
             <Separator></Separator>
-
-            <p class="pb-6">@languageContainer.Keys["BrazilianDocumentsText"]</p>
-
-            <div class="pl-4 mb-28 mt-4  border-l-4 rounded border-secondary">
-                <ul class="pl-6 list-disc  pt-4 pb-4">
-                    <li class="pb-2 flex"><ArrowList></ArrowList>@languageContainer.Keys["BrazilianDocumentsList1"]</li>
-                    <li class="pb-2 flex"><ArrowList></ArrowList>@languageContainer.Keys["BrazilianDocumentsList2"]</li>
-                    <li class="pb-2 flex"><ArrowList></ArrowList>@languageContainer.Keys["BrazilianDocumentsList3"]</li>
-                    <li class="pb-2 flex"><ArrowList></ArrowList>@languageContainer.Keys["BrazilianDocumentsList4"]</li>
-                    <li class="pb-2 flex"><ArrowList></ArrowList>@languageContainer.Keys["BrazilianDocumentsList5"]</li>
-                    <li class="pb-2 flex"><ArrowList></ArrowList>@languageContainer.Keys["BrazilianDocumentsList6"]</li>
-                    <li class="pb-2 flex"><ArrowList></ArrowList>@languageContainer.Keys["BrazilianDocumentsList7"]</li>
-                    <li class="pb-2 flex"><ArrowList></ArrowList>@languageContainer.Keys["BrazilianDocumentsList8"]</li>
+            <div class="paragrapSeparator">
+                <p class="">@languageContainer.Keys["BrazilianDocumentsText"]</p>
+            </div>
+            
+            <div class="pl-4 border-l-4 rounded border-secondary">
+                <ul class="listSeparator">
+                    <li class="flex"><ArrowList></ArrowList>@languageContainer.Keys["BrazilianDocumentsList1"]</li>
+                    <li class="flex"><ArrowList></ArrowList>@languageContainer.Keys["BrazilianDocumentsList2"]</li>
+                    <li class="flex"><ArrowList></ArrowList>@languageContainer.Keys["BrazilianDocumentsList3"]</li>
+                    <li class="flex"><ArrowList></ArrowList>@languageContainer.Keys["BrazilianDocumentsList4"]</li>
+                    <li class="flex"><ArrowList></ArrowList>@languageContainer.Keys["BrazilianDocumentsList5"]</li>
+                    <li class="flex"><ArrowList></ArrowList>@languageContainer.Keys["BrazilianDocumentsList6"]</li>
+                    <li class="flex"><ArrowList></ArrowList>@languageContainer.Keys["BrazilianDocumentsList7"]</li>
+                    <li class="flex"><ArrowList></ArrowList>@languageContainer.Keys["BrazilianDocumentsList8"]</li>
                 </ul>
             </div>
         </div>
 
     </div>
 
-    <div class="flex items-center justify-center w-full">
+    <div class="containerSeparator">
         <div class="max-w-screen-lg">
             <h1 class="TittleStyle">@languageContainer.Keys["GlobalMobility"]</h1>
 
             <Separator></Separator>
 
-            <p class="pb-6">@languageContainer.Keys["GlobalMobilityText1"]</p>
-            <p class="pb-6">@languageContainer.Keys["GlobalMobilityText2"]</p>
-            <p class="pb-6">@languageContainer.Keys["GlobalMobilityText3"]</p>
-            <p class="pb-6">@languageContainer.Keys["GlobalMobilityText4"]</p>
-
-            <div class="pl-4  mt-4 border-l-4 rounded border-secondary">
-                <ul class="pl-6 list-disc pt-4 pb-4">
-                    <li class="pb-2 flex"> <ArrowList></ArrowList> @languageContainer.Keys["GlobalMobilityList1"]</li>
-                    <li class="pb-2 flex"> <ArrowList></ArrowList> @languageContainer.Keys["GlobalMobilityList2"]</li>
-                    <li class="pb-2 flex"> <ArrowList></ArrowList> @languageContainer.Keys["GlobalMobilityList3"]</li>
-                    <li class="pb-2 flex"> <ArrowList></ArrowList> @languageContainer.Keys["GlobalMobilityList4"]</li>
+            <div class="paragrapSeparator">
+                <p class="">@languageContainer.Keys["GlobalMobilityText1"]</p>
+                <p class="">@languageContainer.Keys["GlobalMobilityText2"]</p>
+                <p class="">@languageContainer.Keys["GlobalMobilityText3"]</p>
+                <p class="">@languageContainer.Keys["GlobalMobilityText4"]</p>
+            </div>
+            
+            <div class="pl-4 border-l-4  rounded border-secondary">
+                <ul class="listSeparator">
+                    <li class="flex"> <ArrowList></ArrowList> @languageContainer.Keys["GlobalMobilityList1"]</li>
+                    <li class="flex"> <ArrowList></ArrowList> @languageContainer.Keys["GlobalMobilityList2"]</li>
+                    <li class="flex"> <ArrowList></ArrowList> @languageContainer.Keys["GlobalMobilityList3"]</li>
+                    <li class="flex"> <ArrowList></ArrowList> @languageContainer.Keys["GlobalMobilityList4"]</li>
                 </ul>
             </div>
 
-            <p class="pb-6 mb-28">@languageContainer.Keys["GlobalMobilityText5"]</p>
+            <p class="pt-4">@languageContainer.Keys["GlobalMobilityText5"]</p>
 
         </div>
     </div>
 
-    <div class="flex items-center justify-center w-full bg-gray-100">
+    <div class="containerSeparator bg-gray-100">
         <div class="max-w-screen-lg">
             <h1 class="TittleStyle">@languageContainer.Keys["Acquiring"]</h1>
 
             <Separator></Separator>
 
-            <p class="pb-6">@languageContainer.Keys["AcquiringText1"]</p>
-            <p class="pb-6">@languageContainer.Keys["AcquiringText2"]</p>
+            <div class="paragrapSeparator">
+                <p class="">@languageContainer.Keys["AcquiringText1"]</p>
+                <p class="">@languageContainer.Keys["AcquiringText2"]</p>
+            </div>
 
-            <div class="pl-4 mb-28 mt-4  border-l-4 rounded border-secondary">
-                <ul class="pl-6 list-disc  pt-4 pb-4">
-                    <li class="pb-2 flex"><ArrowList></ArrowList>@languageContainer.Keys["AcquiringList1"]</li>
-                    <li class="pb-2 flex"><ArrowList></ArrowList>@languageContainer.Keys["AcquiringList2"]</li>
-                    <li class="pb-2 flex"><ArrowList></ArrowList>@languageContainer.Keys["AcquiringList3"]</li>
-                    <li class="pb-2 flex"><ArrowList></ArrowList>@languageContainer.Keys["AcquiringList4"]</li>
-                    <li class="pb-2 flex"><ArrowList></ArrowList>@languageContainer.Keys["AcquiringList5"]</li>
+            <div class="pl-4 border-l-4 rounded border-secondary">
+                <ul class="listSeparator">
+                    <li class="flex"><ArrowList></ArrowList>@languageContainer.Keys["AcquiringList1"]</li>
+                    <li class="flex"><ArrowList></ArrowList>@languageContainer.Keys["AcquiringList2"]</li>
+                    <li class="flex"><ArrowList></ArrowList>@languageContainer.Keys["AcquiringList3"]</li>
+                    <li class="flex"><ArrowList></ArrowList>@languageContainer.Keys["AcquiringList4"]</li>
+                    <li class="flex"><ArrowList></ArrowList>@languageContainer.Keys["AcquiringList5"]</li>
                 </ul>
             </div>
         </div>
     </div>
 
-    <div class="flex items-center justify-center w-full">
+    <div class="containerSeparator">
         <div class="max-w-screen-lg">
             <h1 class="TittleStyle">@languageContainer.Keys["InternationalAffairs"]</h1>
 
             <Separator></Separator>
 
-            <p class="pb-6">@languageContainer.Keys["InternationalAffairsText1"]</p>
-            <p class="pb-6">@languageContainer.Keys["InternationalAffairsText2"]</p>
-            <p class="pb-6">@languageContainer.Keys["InternationalAffairsText3"]</p>
-
-            <div class="pl-4 mb-28 mt-4  border-l-4 rounded border-secondary">
-                <ul class="pl-6 list-disc  pt-4 pb-4">
+            <div class="py-14 space-y-4">
+                <p class="pb-6">@languageContainer.Keys["InternationalAffairsText1"]</p>
+                <p class="pb-6">@languageContainer.Keys["InternationalAffairsText2"]</p>
+                <p class="pb-6">@languageContainer.Keys["InternationalAffairsText3"]</p>
+            </div>
+            
+            <div class="pl-4 border-l-4 rounded border-secondary">
+                <ul class="pl-6 list-disc">
                     <li class="pb-2 flex"><ArrowList></ArrowList>@languageContainer.Keys["InternationalAffairsList1"]</li>
                     <li class="pb-2 flex"><ArrowList></ArrowList>@languageContainer.Keys["InternationalAffairsList2"]</li>
                     <li class="pb-2 flex"><ArrowList></ArrowList>@languageContainer.Keys["InternationalAffairsList3"]</li>

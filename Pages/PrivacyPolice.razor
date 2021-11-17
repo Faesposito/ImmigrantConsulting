@@ -4,66 +4,104 @@
 @inject ILanguageContainerService languageContainer
 
 
-<div class="max-w-screen-md px-4 mx-auto mt-24 mb-24 text-lg leading-relaxed text-gray-700 lg:px-0">
-    <h1 class="TittleStyle">@languageContainer.Keys["Privacy"]</h1>
+<div class="max-w-screen-md px-4 mx-auto text-lg leading-relaxed text-gray-700 lg:px-0">
 
-    <Separator></Separator>
 
-    <p class="pb-6">@languageContainer.Keys["PrivacyP1"]</p>
+    <div class="containerSeparator">
+        <div class="max-w-screen-lg">
 
-    <p class="pb-6">@languageContainer.Keys["PrivacyP2"]</p>
+            <h1 class="TittleStyle">@languageContainer.Keys["Privacy"]</h1>
 
-    <p class="pb-6">@languageContainer.Keys["PrivacyP3"]</p>
+            <Separator></Separator>
 
-    <Separator></Separator>
+            <div class="paragrapSeparator">
+                <p class="">@languageContainer.Keys["PrivacyP1"]</p>
 
-    <h1 class="TittleStyle">@languageContainer.Keys["PrivacyInformation"]</h1>
+                <p class="">@languageContainer.Keys["PrivacyP2"]</p>
 
-    <div class="pl-4 mb-8 mt-4  border-l-4 rounded border-secondary">
-        <p class="pb-2">@languageContainer.Keys["PrivacyInformationText1"]</p>
-        <p class="pb-2">@languageContainer.Keys["PrivacyInformationText2"]</p>
-        <p class="pb-2">@languageContainer.Keys["PrivacyInformationText3"]</p>
+                <p class="">@languageContainer.Keys["PrivacyP3"]</p>
+            </div>
+        </div>
+    </div>
+    <div class="containerSeparator bg-gray-100">
+        <div class="max-w-screen-lg">
+            <h1 class="TittleStyle">@languageContainer.Keys["PrivacyInformation"]</h1>
+
+            <Separator></Separator>
+
+            <div class="paragrapSeparator">
+                <p class="">@languageContainer.Keys["PrivacyInformationText1"]</p>
+                <p class="">@languageContainer.Keys["PrivacyInformationText2"]</p>
+                <p class="">@languageContainer.Keys["PrivacyInformationText3"]</p>
+            </div>
+        </div>
     </div>
 
-    <h1 class="TittleStyle">@languageContainer.Keys["PrivacyUseOf"]</h1>
+    <div class="containerSeparator">
+        <div class="max-w-screen-lg">
+            <h1 class="TittleStyle">@languageContainer.Keys["PrivacyUseOf"]</h1>
 
-    <div class="pl-4 mb-8 mt-4  border-l-4 rounded border-secondary">
-        <p class="pb-2">@languageContainer.Keys["PrivacyUseOfText1"]</p>
-        <p class="pb-2">@languageContainer.Keys["PrivacyUseOfText2"]</p>
-        <p class="pb-2">@languageContainer.Keys["PrivacyUseOfText3"]</p>
+            <Separator></Separator>
+
+            <div class="paragrapSeparator">
+                <p class="">@languageContainer.Keys["PrivacyUseOfText1"]</p>
+                <p class="">@languageContainer.Keys["PrivacyUseOfText2"]</p>
+                <p class="">@languageContainer.Keys["PrivacyUseOfText3"]</p>
+            </div>
+        </div>
     </div>
+    <div class="containerSeparator bg-gray-100">
+        <div class="max-w-screen-lg">
+            <h1 class="TittleStyle">@languageContainer.Keys["PrivacyHowWe"]</h1>
 
-    <h1 class="TittleStyle">@languageContainer.Keys["PrivacyHowWe"]</h1>
+            <Separator></Separator>
 
-    <div class="pl-4 mb-8 mt-4  border-l-4 rounded border-secondary">
-        @languageContainer.Keys["PrivacyHowWeText"]
-        <ul class="pl-6 list-disc pt-4 pb-4">
-            <li class="pb-2 flex"> <ArrowList></ArrowList> @languageContainer.Keys["PrivacyHowWeList1"]</li>
-            <li class="pb-2 flex"> <ArrowList></ArrowList> @languageContainer.Keys["PrivacyHowWeList2"]</li>
-            <li class="pb-2 flex"> <ArrowList></ArrowList> @languageContainer.Keys["PrivacyHowWeList3"]</li>
-            <li class="pb-2 flex"> <ArrowList></ArrowList> @languageContainer.Keys["PrivacyHowWeList4"]</li>
-            <li class="pb-2 flex"> <ArrowList></ArrowList> @languageContainer.Keys["PrivacyHowWeList5"]</li>
-        </ul>
+            <div class="paragrapSeparator">
+                <p>@languageContainer.Keys["PrivacyHowWeText"]</p>
+            </div>
+            <div class="pl-4 border-l-4 rounded border-secondary">
+                <ul class="listSeparator">
+                    <li class=" flex"> <ArrowList></ArrowList> @languageContainer.Keys["PrivacyHowWeList1"]</li>
+                    <li class=" flex"> <ArrowList></ArrowList> @languageContainer.Keys["PrivacyHowWeList2"]</li>
+                    <li class=" flex"> <ArrowList></ArrowList> @languageContainer.Keys["PrivacyHowWeList3"]</li>
+                    <li class=" flex"> <ArrowList></ArrowList> @languageContainer.Keys["PrivacyHowWeList4"]</li>
+                    <li class=" flex"> <ArrowList></ArrowList> @languageContainer.Keys["PrivacyHowWeList5"]</li>
+                </ul>
+            </div>
+        </div>
     </div>
+    <div class="containerSeparator">
+        <div class="max-w-screen-lg">
+            <h1 class="TittleStyle">@languageContainer.Keys["PrivacyAccess"]</h1>
 
-    <h1 class="TittleStyle">@languageContainer.Keys["PrivacyAccess"]</h1>
+            <Separator></Separator>
 
-    <div class="pl-4 mb-8 mt-4  border-l-4 rounded border-secondary">@languageContainer.Keys["PrivacyAccessText"]</div>
+            <div class="paragrapSeparator">
+                @languageContainer.Keys["PrivacyAccessText"]
+            </div>
+        </div>
+    </div>
+    <div class="containerSeparator bg-gray-100">
+        <div class="max-w-screen-lg">
+            <h1 class="TittleStyle">@languageContainer.Keys["PrivacySecurity"]</h1>
 
-    <h1 class="TittleStyle">@languageContainer.Keys["PrivacySecurity"]</h1>
+            <Separator></Separator>
 
-    <div class="pl-4 mb-8 mt-4  border-l-4 rounded border-secondary">@languageContainer.Keys["PrivacySecurityText"]</div>
-
+            <div class="paragrapSeparator">
+                @languageContainer.Keys["PrivacySecurityText"]
+            </div>
+        </div>
+    </div>
 </div>
 
 
-@code {
+    @code {
 
-    protected override void OnInitialized()
-    {
-        // This will make the current component gets updated whenever you change the language of the application
-        languageContainer.InitLocalizedComponent(this);
+        protected override void OnInitialized()
+        {
+            // This will make the current component gets updated whenever you change the language of the application
+            languageContainer.InitLocalizedComponent(this);
+
+        }
 
     }
-
-}
