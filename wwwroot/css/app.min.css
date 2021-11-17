@@ -1520,8 +1520,8 @@ video {
   --tw-ring-offset-color: #ddd6fe;
 }
 
-.brightness-150 {
-  --tw-brightness: brightness(1.5);
+.brightness-100 {
+  --tw-brightness: brightness(1);
 }
 
 .transition-transform {
